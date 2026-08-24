@@ -256,8 +256,8 @@ function LighthouseLogo() {
       width={475}
       height={53}
       priority
-      className="shrink-0"
-      style={{ width: "auto", height: 28 }}
+      className="shrink-0 h-5 w-auto lg:h-7"
+      style={{ width: "auto" }}
     />
   );
 }
