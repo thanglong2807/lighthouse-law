@@ -1,0 +1,504 @@
+{
+  "common": {
+    "buttons": {
+      "learnMore": "Learn More",
+      "contactUs": "Contact Us",
+      "bookConsultation": "Book a Consultation",
+      "readMore": "Read More",
+      "viewAll": "View All",
+      "search": "Search",
+      "submit": "Submit",
+      "send": "Send",
+      "back": "Back",
+      "next": "Next",
+      "previous": "Previous",
+      "close": "Close",
+      "showMore": "Show More",
+      "showLess": "Show Less",
+      "loading": "Loading...",
+      "noResults": "No results found"
+    },
+    "labels": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "workingHours": "Working Hours",
+      "weekdays": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed"
+    },
+    "aria": {
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "scrollToTop": "Scroll to top",
+      "externalLink": "Opens in a new tab",
+      "skipToContent": "Skip to main content",
+      "toggleLanguage": "Switch language"
+    }
+  },
+  "nav": {
+    "company": "About",
+    "services": "Services",
+    "team": "Our Team",
+    "offices": "Offices",
+    "insights": "Insights",
+    "forClients": "For Clients",
+    "careers": "Careers",
+    "contact": "Contact",
+    "consultation": "Consultation",
+    "faq": "FAQ",
+    "megaMenu": {
+      "servicesLabel": "Legal Services",
+      "servicesDescription": "Our areas of legal counsel and representation",
+      "aboutLabel": "About Us",
+      "aboutDescription": "Learn about Lighthouse Law",
+      "insightsLabel": "Insights & News",
+      "insightsDescription": "Legal updates and in-depth analysis",
+      "viewAllServices": "View All Services",
+      "viewAllInsights": "View All Insights"
+    },
+    "mobileMenu": {
+      "title": "Menu",
+      "backToMain": "Back to main menu"
+    }
+  },
+  "header": {
+    "announcementBar": "Lighthouse Law - Trusted & Dedicated Legal Counsel",
+    "searchPlaceholder": "Search services, articles...",
+    "languageSwitch": {
+      "label": "Language",
+      "vi": "Tiếng Việt",
+      "en": "English"
+    }
+  },
+  "footer": {
+    "ctaLabel": "Get Started",
+    "ctaTitle": "Ready to Protect Your Rights?",
+    "ctaButton": "Schedule a Free Consultation",
+    "description": "Lighthouse Law provides professional legal advisory services, protecting your lawful rights and standing by your side through every legal journey.",
+    "colServices": "Services",
+    "colCompany": "Company",
+    "colResources": "Resources",
+    "services": {
+      "legalConsultation": "Legal Consultation",
+      "intellectualProperty": "Intellectual Property",
+      "investmentBusiness": "Investment & Business",
+      "corporateLaw": "Corporate Law",
+      "contractDrafting": "Contract Drafting",
+      "disputeResolution": "Dispute Resolution"
+    },
+    "copyright": "© {year} Lighthouse Law. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "disclaimer": "Disclaimer",
+    "sitemap": "Sitemap"
+  },
+  "hero": {
+    "eyebrow": "Strategic Legal Counsel",
+    "heading": "Protecting Your Rights.\nBuilding Your Future.",
+    "headingHighlight": "Rights",
+    "description": "Lighthouse Law delivers comprehensive legal solutions for individuals and businesses. Our experienced attorneys are committed to protecting your lawful rights with dedication and professionalism.",
+    "primaryCta": "Book a Consultation",
+    "secondaryCta": "Explore Our Services"
+  },
+  "trustIndicators": {
+    "items": {
+      "professionalAdvice": {
+        "title": "Professional Counsel",
+        "description": "An experienced team of attorneys across diverse areas of law"
+      },
+      "confidentialService": {
+        "title": "Confidential Service",
+        "description": "Absolute commitment to client confidentiality and data protection"
+      },
+      "practicalSolutions": {
+        "title": "Practical Solutions",
+        "description": "Advice grounded in real-world scenarios, focused on tangible outcomes"
+      },
+      "longTermPartnership": {
+        "title": "Long-Term Partnership",
+        "description": "Standing by your side throughout your entire legal journey"
+      }
+    }
+  },
+  "about": {
+    "sectionLabel": "About Us",
+    "heading": "About Lighthouse Law",
+    "description": "Lighthouse Law was founded with a mission to deliver high-quality, accessible legal services to every individual and business. We believe everyone deserves to have their lawful rights protected.",
+    "description2": "With years of experience and a team of dedicated attorneys, we have earned the trust of thousands of clients across Vietnam. Our approach combines deep legal expertise with a genuine understanding of our clients' needs.",
+    "viewMore": "Learn More About Us",
+    "values": {
+      "integrity": {
+        "title": "Integrity",
+        "description": "Honesty and transparency in every engagement"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Committed to the highest standard of service quality"
+      },
+      "empathy": {
+        "title": "Empathy",
+        "description": "Listening to and understanding our clients' needs"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Applying modern approaches to legal practice"
+      }
+    }
+  },
+  "services": {
+    "sectionLabel": "Legal Services",
+    "sectionTitle": "Comprehensive Legal Solutions",
+    "sectionDescription": "We provide a full range of legal advisory and representation services for individuals, businesses, and investors.",
+    "filterLabels": {
+      "all": "All",
+      "individuals": "Individuals",
+      "businesses": "Businesses",
+      "investors": "Investors",
+      "disputes": "Disputes",
+      "compliance": "Compliance"
+    },
+    "notSure": "Not sure which service you need?",
+    "speakWithLawyer": "Speak with an attorney for personalized guidance",
+    "items": {
+      "tu-van-phap-ly": {
+        "title": "Legal Consultation",
+        "short": "Comprehensive legal advice for individuals and businesses"
+      },
+      "so-huu-tri-tue": {
+        "title": "Intellectual Property",
+        "short": "Trademark, patent, and copyright protection"
+      },
+      "dau-tu-kinh-doanh": {
+        "title": "Investment & Business",
+        "short": "Investment advisory and business structuring"
+      },
+      "luat-doanh-nghiep": {
+        "title": "Corporate Law",
+        "short": "Company formation, governance, and compliance"
+      },
+      "luat-bat-dong-san": {
+        "title": "Real Estate Law",
+        "short": "Property transactions and land use rights"
+      },
+      "luat-dan-su": {
+        "title": "Civil Law",
+        "short": "Civil disputes, obligations, and rights protection"
+      },
+      "luat-hinh-su": {
+        "title": "Criminal Law",
+        "short": "Criminal defense and legal representation"
+      },
+      "luat-hon-nhan-gia-dinh": {
+        "title": "Family Law",
+        "short": "Marriage, divorce, and family matters"
+      },
+      "luat-lao-dong": {
+        "title": "Labor Law",
+        "short": "Employment contracts and workplace disputes"
+      },
+      "luat-thue": {
+        "title": "Tax Law",
+        "short": "Tax compliance, planning, and dispute resolution"
+      },
+      "soan-thao-hop-dong": {
+        "title": "Contract Drafting",
+        "short": "Drafting, reviewing, and negotiating contracts"
+      },
+      "giai-quyet-tranh-chap": {
+        "title": "Dispute Resolution",
+        "short": "Mediation, arbitration, and litigation"
+      }
+    }
+  },
+  "whyChoose": {
+    "sectionLabel": "Our Advantages",
+    "heading": "Why Choose Lighthouse Law",
+    "description": "We are committed to providing exceptional legal services built on trust, expertise, and dedication.",
+    "items": {
+      "strategicThinking": {
+        "title": "Strategic Thinking",
+        "description": "We analyze legal matters from multiple perspectives to deliver the most effective solution for our clients."
+      },
+      "experiencedProfessionals": {
+        "title": "Experienced Professionals",
+        "description": "Our attorneys bring years of hands-on experience across a wide range of legal disciplines."
+      },
+      "clearCommunication": {
+        "title": "Clear Communication",
+        "description": "We explain legal matters in plain language so our clients fully understand their situation and options."
+      },
+      "confidentiality": {
+        "title": "Absolute Confidentiality",
+        "description": "We are committed to safeguarding client information and privacy to the highest standard."
+      },
+      "clientFocused": {
+        "title": "Client-Centered Approach",
+        "description": "Every decision and action is guided by the best interests of our clients."
+      },
+      "longTermSupport": {
+        "title": "Long-Term Support",
+        "description": "We go beyond resolving immediate issues to support our clients well into the future."
+      }
+    }
+  },
+  "industries": {
+    "sectionLabel": "Industries",
+    "heading": "Industries We Serve",
+    "description": "We provide specialized legal counsel to clients across a wide range of industry sectors.",
+    "list": {
+      "realEstate": "Real Estate",
+      "banking": "Banking & Finance",
+      "technology": "Technology",
+      "manufacturing": "Manufacturing",
+      "healthcare": "Healthcare & Pharmaceuticals",
+      "retail": "Retail & E-Commerce",
+      "construction": "Construction",
+      "education": "Education",
+      "hospitality": "Hospitality & Tourism",
+      "logistics": "Transportation & Logistics"
+    }
+  },
+  "team": {
+    "sectionLabel": "Our Team",
+    "heading": "Our Legal Team",
+    "description": "Meet our experienced and dedicated team of attorneys.",
+    "viewAll": "View All Team Members",
+    "members": {
+      "nguyen-van-a": {
+        "name": "Nguyen Van A",
+        "initials": "NA",
+        "role": "Managing Partner",
+        "areas": "Corporate Law, Investment & Business"
+      },
+      "tran-thi-b": {
+        "name": "Tran Thi B",
+        "initials": "TB",
+        "role": "Senior Partner",
+        "areas": "Intellectual Property, Contract Drafting"
+      },
+      "le-van-c": {
+        "name": "Le Van C",
+        "initials": "LC",
+        "role": "Partner",
+        "areas": "Dispute Resolution, Criminal Law"
+      }
+    },
+    "filters": {
+      "all": "All",
+      "partners": "Partners",
+      "associates": "Associates",
+      "counsel": "Counsel"
+    },
+    "roles": {
+      "managingPartner": "Managing Partner",
+      "seniorPartner": "Senior Partner",
+      "partner": "Partner",
+      "seniorAssociate": "Senior Associate",
+      "associate": "Associate",
+      "ofCounsel": "Of Counsel",
+      "paralegal": "Paralegal"
+    }
+  },
+  "testimonials": {
+    "sectionLabel": "Testimonials",
+    "heading": "What Our Clients Say",
+    "description": "Feedback from clients who have trusted us with their legal matters.",
+    "items": {
+      "1": {
+        "quote": "Lighthouse Law provided exceptional guidance throughout our company's restructuring. Their strategic approach and attention to detail gave us confidence at every step.",
+        "author": "Pham Minh D",
+        "initials": "PD",
+        "role": "CEO, TechViet Corp"
+      },
+      "2": {
+        "quote": "The intellectual property team at Lighthouse Law helped us protect our brand across Southeast Asia. Professional, responsive, and thoroughly knowledgeable.",
+        "author": "Hoang Thi E",
+        "initials": "HE",
+        "role": "Founder, Creative Solutions"
+      },
+      "3": {
+        "quote": "When we faced a complex real estate dispute, Lighthouse Law's attorneys navigated the situation with remarkable skill. We achieved a favorable outcome thanks to their dedication.",
+        "author": "Vo Van F",
+        "initials": "VF",
+        "role": "Director, Saigon Invest Group"
+      }
+    }
+  },
+  "insights": {
+    "sectionLabel": "Insights",
+    "heading": "Insights & News",
+    "description": "Stay informed with legal updates, in-depth analysis, and practical guidance from our team of attorneys.",
+    "viewAll": "View All Insights",
+    "readMore": "Read More",
+    "minRead": "min read",
+    "items": {
+      "1": {
+        "category": "Legal Updates",
+        "date": "July 28, 2026",
+        "readTime": "5",
+        "title": "Key Changes in Vietnam's New Enterprise Law 2026",
+        "excerpt": "An overview of the significant amendments to the Enterprise Law and their implications for businesses operating in Vietnam.",
+        "author": "Nguyen Van A"
+      },
+      "2": {
+        "category": "In-Depth Analysis",
+        "date": "July 15, 2026",
+        "readTime": "8",
+        "title": "Protecting Intellectual Property in the Digital Age",
+        "excerpt": "How businesses can safeguard their trademarks, patents, and copyrights in an increasingly digital marketplace.",
+        "author": "Tran Thi B"
+      },
+      "3": {
+        "category": "Guides",
+        "date": "July 5, 2026",
+        "readTime": "6",
+        "title": "Foreign Investment in Vietnam: A Complete Guide",
+        "excerpt": "Essential steps, legal requirements, and practical advice for foreign investors looking to establish a presence in Vietnam.",
+        "author": "Le Van C"
+      }
+    },
+    "categories": {
+      "all": "All",
+      "legalUpdates": "Legal Updates",
+      "analysis": "In-Depth Analysis",
+      "guides": "Guides",
+      "caseStudies": "Case Studies",
+      "news": "News"
+    },
+    "contentTypes": {
+      "article": "Article",
+      "video": "Video",
+      "podcast": "Podcast",
+      "infographic": "Infographic",
+      "whitepaper": "White Paper"
+    }
+  },
+  "cta": {
+    "label": "Get Started",
+    "heading": "Ready to Protect Your Rights?",
+    "description": "Schedule a consultation with our experienced attorneys and take the first step toward resolving your legal matters.",
+    "primaryCta": "Book a Consultation",
+    "secondaryCta": "Contact Us"
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "description": "Leave your details and we will reach out to you, or schedule an appointment directly.",
+    "form": {
+      "fullName": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "company": "Company (optional)",
+      "service": "Service of Interest",
+      "method": "Consultation Method",
+      "date": "Preferred Date",
+      "time": "Preferred Time",
+      "message": "Describe Your Legal Matter",
+      "privacy": "I agree to the Privacy Policy and Terms of Use",
+      "submit": "Submit Consultation Request"
+    },
+    "methods": {
+      "office": "At Our Office",
+      "video": "Via Video Call",
+      "phone": "Via Phone"
+    },
+    "successMessage": "Your request has been submitted successfully. We will get back to you as soon as possible.",
+    "errorMessage": "An error occurred. Please try again or contact us directly by phone."
+  },
+  "consultation": {
+    "heading": "Book a Consultation",
+    "description": "Fill in the form below to schedule a free legal consultation with our team of experienced attorneys.",
+    "steps": {
+      "selectService": "Select a Service",
+      "describeMatter": "Describe Your Matter",
+      "selectMethod": "Choose a Method",
+      "selectDate": "Select Date & Time",
+      "contactInfo": "Contact Information",
+      "review": "Review & Confirm"
+    },
+    "labels": {
+      "selectServicePlaceholder": "Choose the area of law you need counsel in",
+      "describeYourMatter": "Briefly describe your legal matter",
+      "preferredMethod": "How would you like to receive counsel?",
+      "selectAvailableDate": "Select an available date and time",
+      "provideContactInfo": "Please provide your contact information",
+      "reviewAndConfirm": "Review your information and confirm"
+    }
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our legal services.",
+    "categories": {
+      "general": "General",
+      "fees": "Fees & Billing",
+      "business": "Business Law",
+      "individual": "Individual Matters",
+      "court": "Litigation",
+      "online": "Online Consultation",
+      "privacy": "Confidentiality"
+    }
+  },
+  "careers": {
+    "sectionLabel": "Careers",
+    "heading": "Career Opportunities",
+    "description": "Join the Lighthouse Law team and build your legal career with us.",
+    "noOpenings": "There are currently no open positions. You may still submit your resume for future opportunities.",
+    "applyNow": "Apply Now",
+    "sendResume": "Submit Resume",
+    "departments": {
+      "legal": "Legal",
+      "operations": "Operations",
+      "marketing": "Marketing"
+    }
+  },
+  "notFound": {
+    "heading": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "actions": {
+      "goHome": "Go to Homepage",
+      "goBack": "Go Back",
+      "contactUs": "Contact Support"
+    }
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "invalidPhone": "Please enter a valid phone number",
+    "messageTooShort": "Message is too short, please enter at least 20 characters",
+    "futureDate": "Please select a date in the future",
+    "fileSize": "File size exceeds the allowed limit",
+    "fileType": "File format is not supported",
+    "consentRequired": "You must agree to the Privacy Policy to continue"
+  },
+  "serviceDetail": {
+    "ctaButton": "Get Started",
+    "whenYouNeed": "When You Need This Service",
+    "scopeOfServices": "Scope of Services",
+    "legalChallenges": "Common Legal Challenges",
+    "whyChooseUs": "Why Choose Lighthouse Law",
+    "ourProcess": "Our Process",
+    "representativeMatters": "Representative Matters",
+    "representativeMattersNote": "Details have been anonymized to protect client confidentiality.",
+    "faq": "Frequently Asked Questions",
+    "relatedServices": "Related Services"
+  },
+  "metadata": {
+    "siteDescription": "Lighthouse Law - A trusted law firm providing professional legal advisory services for individuals and businesses in Vietnam.",
+    "pageTitles": {
+      "home": "Home",
+      "about": "About",
+      "services": "Legal Services",
+      "team": "Our Team",
+      "offices": "Offices",
+      "insights": "Insights & News",
+      "contact": "Contact",
+      "consultation": "Book a Consultation",
+      "careers": "Careers",
+      "faq": "FAQ",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "notFound": "Page Not Found"
+    }
+  }
+}

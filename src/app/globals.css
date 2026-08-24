@@ -1,0 +1,204 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme {
+  /* Brand Colors */
+  --color-gold: #D4AF37;
+  --color-gold-light: #F6D47A;
+  --color-gold-dark: #B8963F;
+  --color-gold-pale: #FAEBC8;
+  --color-charcoal: #00112D;
+  --color-charcoal-mid: #001840;
+  --color-charcoal-light: #0A2A52;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F7F5F0;
+  --color-text-primary: #1C1C1C;
+  --color-text-secondary: #5A5A5A;
+  --color-text-tertiary: #8A8A8A;
+  --color-border: #E0DCD4;
+  --color-success: #3D8B35;
+  --color-warning: #D4920A;
+  --color-error: #B43737;
+
+  /* Font Families — next/font overrides these via CSS variables on <body> */
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Cascadia Code", Consolas, monospace;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Typography Utilities
+   ============================================ */
+
+.text-gold-metallic {
+  background: linear-gradient(135deg, #B8963F, #D4AF37 25%, #F6D47A 45%, #D4AF37 55%, #B8963F 75%, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.display-xl {
+  font-family: var(--font-heading);
+  font-size: var(--text-display-xl);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.display-lg {
+  font-family: var(--font-heading);
+  font-size: var(--text-display-lg);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.heading-1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-heading-1);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-heading-2);
+  font-weight: 400;
+  line-height: var(--leading-snug);
+}
+
+.heading-3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-heading-3);
+  font-weight: 400;
+  line-height: var(--leading-snug);
+}
+
+.heading-4 {
+  font-family: var(--font-heading);
+  font-size: var(--text-heading-4);
+  font-weight: 400;
+  line-height: var(--leading-snug);
+}
+
+.body-lg {
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.body-md {
+  font-size: var(--text-body-md);
+  line-height: var(--leading-normal);
+}
+
+.body-sm {
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-normal);
+}
+
+.caption {
+  font-size: var(--text-caption);
+  line-height: 1.5;
+}
+
+.overline {
+  font-size: var(--text-overline);
+  font-weight: 600;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+/* ============================================
+   Component Base Styles
+   ============================================ */
+
+.gold-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--brand-primary), transparent);
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-fast) var(--ease-default),
+              box-shadow var(--duration-fast) var(--ease-default);
+}
+
+@media (min-width: 768px) {
+  .form-input {
+    font-size: var(--text-body-sm);
+    padding: 0.625rem 0.875rem;
+  }
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
+}
+
+.form-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.form-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Skip to content */
+.skip-to-content {
+  position: absolute;
+  left: -10000px;
+  top: 8px;
+  z-index: 1000;
+  padding: 8px 16px;
+  background: var(--brand-primary);
+  color: var(--brand-secondary);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-sm);
+}
+
+.skip-to-content:focus {
+  left: 16px;
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

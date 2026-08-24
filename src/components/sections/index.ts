@@ -1,0 +1,10 @@
+export { HeroSection } from "./hero";
+export { TrustIndicators } from "./trust-indicators";
+export { CompanyIntro } from "./company-intro";
+export { PracticeAreas } from "./practice-areas";
+export { WhyChooseUs } from "./why-choose-us";
+export { IndustriesServed } from "./industries-served";
+export { TeamPreview } from "./team-preview";
+export { Testimonials } from "./testimonials";
+export { LatestInsights } from "./latest-insights";
+export { CTASection } from "./cta-section";

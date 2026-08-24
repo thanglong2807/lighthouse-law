@@ -1,0 +1,504 @@
+{
+  "common": {
+    "buttons": {
+      "learnMore": "Tìm hiểu thêm",
+      "contactUs": "Liên hệ",
+      "bookConsultation": "Đặt lịch tư vấn",
+      "readMore": "Đọc thêm",
+      "viewAll": "Xem tất cả",
+      "search": "Tìm kiếm",
+      "submit": "Gửi",
+      "send": "Gửi đi",
+      "back": "Quay lại",
+      "next": "Tiếp theo",
+      "previous": "Trước đó",
+      "close": "Đóng",
+      "showMore": "Xem thêm",
+      "showLess": "Thu gọn",
+      "loading": "Đang tải...",
+      "noResults": "Không có kết quả"
+    },
+    "labels": {
+      "phone": "Điện thoại",
+      "email": "Email",
+      "address": "Địa chỉ",
+      "workingHours": "Giờ làm việc",
+      "weekdays": "Thứ Hai - Thứ Sáu",
+      "saturday": "Thứ Bảy",
+      "sunday": "Chủ Nhật",
+      "closed": "Nghỉ"
+    },
+    "aria": {
+      "openMenu": "Mở menu",
+      "closeMenu": "Đóng menu",
+      "scrollToTop": "Cuộn lên đầu trang",
+      "externalLink": "Mở trong tab mới",
+      "skipToContent": "Chuyển đến nội dung chính",
+      "toggleLanguage": "Chuyển đổi ngôn ngữ"
+    }
+  },
+  "nav": {
+    "company": "Giới thiệu",
+    "services": "Dịch vụ",
+    "team": "Đội ngũ",
+    "offices": "Văn phòng",
+    "insights": "Bài viết",
+    "forClients": "Dành cho khách hàng",
+    "careers": "Tuyển dụng",
+    "contact": "Liên hệ",
+    "consultation": "Đặt lịch tư vấn",
+    "faq": "Câu hỏi thường gặp",
+    "megaMenu": {
+      "servicesLabel": "Dịch vụ pháp lý",
+      "servicesDescription": "Các lĩnh vực tư vấn và đại diện pháp lý",
+      "aboutLabel": "Về chúng tôi",
+      "aboutDescription": "Tìm hiểu về Lighthouse Law",
+      "insightsLabel": "Bài viết & Tin tức",
+      "insightsDescription": "Cập nhật pháp luật và phân tích chuyên sâu",
+      "viewAllServices": "Xem tất cả dịch vụ",
+      "viewAllInsights": "Xem tất cả bài viết"
+    },
+    "mobileMenu": {
+      "title": "Menu",
+      "backToMain": "Quay lại menu chính"
+    }
+  },
+  "header": {
+    "announcementBar": "Lighthouse Law - Tư vấn pháp lý uy tín, tận tâm",
+    "searchPlaceholder": "Tìm kiếm dịch vụ, bài viết...",
+    "languageSwitch": {
+      "label": "Ngôn ngữ",
+      "vi": "Tiếng Việt",
+      "en": "English"
+    }
+  },
+  "footer": {
+    "ctaLabel": "Bắt đầu ngay",
+    "ctaTitle": "Sẵn sàng bảo vệ quyền lợi của bạn?",
+    "ctaButton": "Đặt lịch tư vấn miễn phí",
+    "description": "Lighthouse Law cung cấp dịch vụ tư vấn pháp lý chuyên nghiệp, bảo vệ quyền lợi hợp pháp và đồng hành cùng khách hàng trên mọi hành trình pháp lý.",
+    "colServices": "Dịch vụ",
+    "colCompany": "Công ty",
+    "colResources": "Tài nguyên",
+    "services": {
+      "legalConsultation": "Tư vấn pháp lý",
+      "intellectualProperty": "Sở hữu trí tuệ",
+      "investmentBusiness": "Tư vấn đầu tư & kinh doanh",
+      "corporateLaw": "Luật doanh nghiệp",
+      "contractDrafting": "Soạn thảo hợp đồng",
+      "disputeResolution": "Giải quyết tranh chấp"
+    },
+    "copyright": "© {year} Lighthouse Law. Mọi quyền được bảo lưu.",
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfUse": "Điều khoản sử dụng",
+    "disclaimer": "Tuyên bố miễn trừ trách nhiệm",
+    "sitemap": "Sơ đồ trang"
+  },
+  "hero": {
+    "eyebrow": "Tư vấn pháp lý chiến lược",
+    "heading": "Bảo vệ quyền lợi.\nXây dựng tương lai.",
+    "headingHighlight": "Quyền lợi",
+    "description": "Lighthouse Law cung cấp giải pháp pháp lý toàn diện cho cá nhân và doanh nghiệp. Đội ngũ luật sư giàu kinh nghiệm cam kết bảo vệ quyền lợi hợp pháp của bạn với sự tận tâm và chuyên nghiệp.",
+    "primaryCta": "Đặt lịch tư vấn",
+    "secondaryCta": "Khám phá dịch vụ"
+  },
+  "trustIndicators": {
+    "items": {
+      "professionalAdvice": {
+        "title": "Tư vấn chuyên nghiệp",
+        "description": "Đội ngũ luật sư giàu kinh nghiệm trong nhiều lĩnh vực pháp lý"
+      },
+      "confidentialService": {
+        "title": "Dịch vụ bảo mật",
+        "description": "Cam kết bảo mật tuyệt đối mọi thông tin khách hàng"
+      },
+      "practicalSolutions": {
+        "title": "Giải pháp thực tiễn",
+        "description": "Tư vấn dựa trên tình huống thực tế, hướng đến kết quả cụ thể"
+      },
+      "longTermPartnership": {
+        "title": "Đối tác lâu dài",
+        "description": "Đồng hành cùng khách hàng trong suốt hành trình pháp lý"
+      }
+    }
+  },
+  "about": {
+    "sectionLabel": "Về chúng tôi",
+    "heading": "Về Lighthouse Law",
+    "description": "Lighthouse Law được thành lập với sứ mệnh cung cấp dịch vụ pháp lý chất lượng cao, dễ tiếp cận cho mọi cá nhân và doanh nghiệp. Chúng tôi tin rằng mỗi người đều xứng đáng được bảo vệ quyền lợi hợp pháp của mình.",
+    "description2": "Với nhiều năm kinh nghiệm và đội ngũ luật sư tận tâm, chúng tôi đã nhận được sự tin tưởng của hàng ngàn khách hàng trên khắp Việt Nam. Phương pháp của chúng tôi kết hợp chuyên môn pháp lý sâu rộng với sự thấu hiểu chân thành về nhu cầu của khách hàng.",
+    "viewMore": "Tìm hiểu thêm về chúng tôi",
+    "values": {
+      "integrity": {
+        "title": "Chính trực",
+        "description": "Trung thực và minh bạch trong mọi hoạt động"
+      },
+      "excellence": {
+        "title": "Xuất sắc",
+        "description": "Cam kết chất lượng dịch vụ ở mức cao nhất"
+      },
+      "empathy": {
+        "title": "Thấu hiểu",
+        "description": "Lắng nghe và thấu hiểu nhu cầu của khách hàng"
+      },
+      "innovation": {
+        "title": "Đổi mới",
+        "description": "Áp dụng phương pháp hiện đại trong thực hành pháp luật"
+      }
+    }
+  },
+  "services": {
+    "sectionLabel": "Dịch vụ pháp lý",
+    "sectionTitle": "Giải pháp pháp lý toàn diện",
+    "sectionDescription": "Chúng tôi cung cấp đầy đủ các dịch vụ tư vấn và đại diện pháp lý cho cá nhân, doanh nghiệp và nhà đầu tư.",
+    "filterLabels": {
+      "all": "Tất cả",
+      "individuals": "Cá nhân",
+      "businesses": "Doanh nghiệp",
+      "investors": "Nhà đầu tư",
+      "disputes": "Tranh chấp",
+      "compliance": "Tuân thủ"
+    },
+    "notSure": "Chưa biết chọn dịch vụ nào?",
+    "speakWithLawyer": "Nói chuyện với luật sư để được tư vấn phù hợp",
+    "items": {
+      "tu-van-phap-ly": {
+        "title": "Tư vấn pháp lý",
+        "short": "Tư vấn pháp luật toàn diện cho cá nhân và doanh nghiệp"
+      },
+      "so-huu-tri-tue": {
+        "title": "Sở hữu trí tuệ",
+        "short": "Bảo hộ nhãn hiệu, bằng sáng chế và bản quyền"
+      },
+      "dau-tu-kinh-doanh": {
+        "title": "Đầu tư kinh doanh",
+        "short": "Tư vấn đầu tư và cơ cấu kinh doanh"
+      },
+      "luat-doanh-nghiep": {
+        "title": "Luật doanh nghiệp",
+        "short": "Thành lập, quản trị và tuân thủ doanh nghiệp"
+      },
+      "luat-bat-dong-san": {
+        "title": "Luật bất động sản",
+        "short": "Giao dịch bất động sản và quyền sử dụng đất"
+      },
+      "luat-dan-su": {
+        "title": "Luật dân sự",
+        "short": "Tranh chấp dân sự, nghĩa vụ và bảo vệ quyền lợi"
+      },
+      "luat-hinh-su": {
+        "title": "Luật hình sự",
+        "short": "Bào chữa hình sự và đại diện pháp lý"
+      },
+      "luat-hon-nhan-gia-dinh": {
+        "title": "Luật hôn nhân gia đình",
+        "short": "Hôn nhân, ly hôn và các vấn đề gia đình"
+      },
+      "luat-lao-dong": {
+        "title": "Luật lao động",
+        "short": "Hợp đồng lao động và tranh chấp lao động"
+      },
+      "luat-thue": {
+        "title": "Luật thuế",
+        "short": "Tuân thủ thuế, lập kế hoạch và giải quyết tranh chấp thuế"
+      },
+      "soan-thao-hop-dong": {
+        "title": "Soạn thảo hợp đồng",
+        "short": "Soạn thảo, rà soát và đàm phán hợp đồng"
+      },
+      "giai-quyet-tranh-chap": {
+        "title": "Giải quyết tranh chấp",
+        "short": "Hòa giải, trọng tài và tố tụng"
+      }
+    }
+  },
+  "whyChoose": {
+    "sectionLabel": "Ưu điểm của chúng tôi",
+    "heading": "Tại sao chọn Lighthouse Law",
+    "description": "Chúng tôi cam kết cung cấp dịch vụ pháp lý xuất sắc dựa trên sự tin tưởng, chuyên môn và tận tâm.",
+    "items": {
+      "strategicThinking": {
+        "title": "Tư duy chiến lược",
+        "description": "Phân tích vấn đề pháp lý từ nhiều góc độ để đưa ra giải pháp tối ưu nhất cho khách hàng."
+      },
+      "experiencedProfessionals": {
+        "title": "Đội ngũ giàu kinh nghiệm",
+        "description": "Luật sư của chúng tôi có nhiều năm kinh nghiệm thực tiễn trong các lĩnh vực pháp lý đa dạng."
+      },
+      "clearCommunication": {
+        "title": "Giao tiếp rõ ràng",
+        "description": "Giải thích vấn đề pháp lý bằng ngôn ngữ dễ hiểu, giúp khách hàng nắm rõ tình huống và lựa chọn."
+      },
+      "confidentiality": {
+        "title": "Bảo mật tuyệt đối",
+        "description": "Cam kết bảo vệ thông tin và quyền riêng tư của khách hàng theo tiêu chuẩn cao nhất."
+      },
+      "clientFocused": {
+        "title": "Lấy khách hàng làm trung tâm",
+        "description": "Mọi quyết định và hành động đều hướng đến lợi ích tốt nhất của khách hàng."
+      },
+      "longTermSupport": {
+        "title": "Hỗ trợ lâu dài",
+        "description": "Không chỉ giải quyết vấn đề trước mắt mà còn đồng hành cùng khách hàng trong tương lai."
+      }
+    }
+  },
+  "industries": {
+    "sectionLabel": "Ngành nghề",
+    "heading": "Ngành nghề phục vụ",
+    "description": "Chúng tôi cung cấp tư vấn pháp lý chuyên biệt cho khách hàng trong nhiều lĩnh vực ngành nghề.",
+    "list": {
+      "realEstate": "Bất động sản",
+      "banking": "Ngân hàng & Tài chính",
+      "technology": "Công nghệ",
+      "manufacturing": "Sản xuất",
+      "healthcare": "Y tế & Dược phẩm",
+      "retail": "Bán lẻ & Thương mại điện tử",
+      "construction": "Xây dựng",
+      "education": "Giáo dục",
+      "hospitality": "Khách sạn & Du lịch",
+      "logistics": "Vận tải & Logistics"
+    }
+  },
+  "team": {
+    "sectionLabel": "Đội ngũ",
+    "heading": "Đội ngũ luật sư",
+    "description": "Gặp gỡ đội ngũ luật sư giàu kinh nghiệm và tận tâm của chúng tôi.",
+    "viewAll": "Xem tất cả thành viên",
+    "members": {
+      "nguyen-van-a": {
+        "name": "Nguyễn Văn A",
+        "initials": "NA",
+        "role": "Luật sư điều hành",
+        "areas": "Luật doanh nghiệp, Đầu tư kinh doanh"
+      },
+      "tran-thi-b": {
+        "name": "Trần Thị B",
+        "initials": "TB",
+        "role": "Đối tác cao cấp",
+        "areas": "Sở hữu trí tuệ, Soạn thảo hợp đồng"
+      },
+      "le-van-c": {
+        "name": "Lê Văn C",
+        "initials": "LC",
+        "role": "Đối tác",
+        "areas": "Giải quyết tranh chấp, Luật hình sự"
+      }
+    },
+    "filters": {
+      "all": "Tất cả",
+      "partners": "Đối tác",
+      "associates": "Luật sư",
+      "counsel": "Cố vấn"
+    },
+    "roles": {
+      "managingPartner": "Luật sư điều hành",
+      "seniorPartner": "Đối tác cao cấp",
+      "partner": "Đối tác",
+      "seniorAssociate": "Luật sư cao cấp",
+      "associate": "Luật sư",
+      "ofCounsel": "Cố vấn pháp lý",
+      "paralegal": "Trợ lý luật sư"
+    }
+  },
+  "testimonials": {
+    "sectionLabel": "Đánh giá",
+    "heading": "Khách hàng nói gì",
+    "description": "Phản hồi từ những khách hàng đã tin tưởng và sử dụng dịch vụ của chúng tôi.",
+    "items": {
+      "1": {
+        "quote": "Lighthouse Law đã hỗ trợ xuất sắc trong suốt quá trình tái cơ cấu công ty chúng tôi. Phương pháp chiến lược và sự tỉ mỉ của họ mang lại cho chúng tôi sự tin tưởng ở mọi bước.",
+        "author": "Phạm Minh D",
+        "initials": "PD",
+        "role": "CEO, TechViet Corp"
+      },
+      "2": {
+        "quote": "Đội ngũ sở hữu trí tuệ tại Lighthouse Law đã giúp chúng tôi bảo hộ thương hiệu trên khắp Đông Nam Á. Chuyên nghiệp, phản hồi nhanh và có kiến thức sâu rộng.",
+        "author": "Hoàng Thị E",
+        "initials": "HE",
+        "role": "Nhà sáng lập, Creative Solutions"
+      },
+      "3": {
+        "quote": "Khi chúng tôi gặp tranh chấp bất động sản phức tạp, các luật sư của Lighthouse Law đã xử lý tình huống một cách khéo léo. Chúng tôi đạt được kết quả thuận lợi nhờ sự tận tâm của họ.",
+        "author": "Võ Văn F",
+        "initials": "VF",
+        "role": "Giám đốc, Saigon Invest Group"
+      }
+    }
+  },
+  "insights": {
+    "sectionLabel": "Bài viết",
+    "heading": "Bài viết & Tin tức",
+    "description": "Cập nhật các thay đổi pháp luật, phân tích chuyên sâu và hướng dẫn thực tiễn từ đội ngũ luật sư của chúng tôi.",
+    "viewAll": "Xem tất cả bài viết",
+    "readMore": "Đọc thêm",
+    "minRead": "phút đọc",
+    "items": {
+      "1": {
+        "category": "Cập nhật pháp luật",
+        "date": "28 Tháng 7, 2026",
+        "readTime": "5",
+        "title": "Những thay đổi quan trọng trong Luật Doanh nghiệp mới 2026",
+        "excerpt": "Tổng quan về các sửa đổi đáng chú ý của Luật Doanh nghiệp và tác động đối với các doanh nghiệp hoạt động tại Việt Nam.",
+        "author": "Nguyễn Văn A"
+      },
+      "2": {
+        "category": "Phân tích chuyên sâu",
+        "date": "15 Tháng 7, 2026",
+        "readTime": "8",
+        "title": "Bảo vệ sở hữu trí tuệ trong kỷ nguyên số",
+        "excerpt": "Cách doanh nghiệp có thể bảo vệ nhãn hiệu, bằng sáng chế và bản quyền trong thị trường ngày càng số hóa.",
+        "author": "Trần Thị B"
+      },
+      "3": {
+        "category": "Hướng dẫn",
+        "date": "5 Tháng 7, 2026",
+        "readTime": "6",
+        "title": "Đầu tư nước ngoài tại Việt Nam: Hướng dẫn toàn diện",
+        "excerpt": "Các bước thiết yếu, yêu cầu pháp lý và lời khuyên thực tiễn cho nhà đầu tư nước ngoài muốn hiện diện tại Việt Nam.",
+        "author": "Lê Văn C"
+      }
+    },
+    "categories": {
+      "all": "Tất cả",
+      "legalUpdates": "Cập nhật pháp luật",
+      "analysis": "Phân tích chuyên sâu",
+      "guides": "Hướng dẫn",
+      "caseStudies": "Tình huống thực tế",
+      "news": "Tin tức"
+    },
+    "contentTypes": {
+      "article": "Bài viết",
+      "video": "Video",
+      "podcast": "Podcast",
+      "infographic": "Infographic",
+      "whitepaper": "Báo cáo chuyên sâu"
+    }
+  },
+  "cta": {
+    "label": "Bắt đầu ngay",
+    "heading": "Sẵn sàng bảo vệ quyền lợi của bạn?",
+    "description": "Đặt lịch tư vấn với đội ngũ luật sư giàu kinh nghiệm của chúng tôi và thực hiện bước đầu tiên để giải quyết vấn đề pháp lý của bạn.",
+    "primaryCta": "Đặt lịch tư vấn",
+    "secondaryCta": "Liên hệ"
+  },
+  "contact": {
+    "heading": "Liên hệ với chúng tôi",
+    "description": "Hãy để lại thông tin để chúng tôi liên hệ tư vấn cho bạn, hoặc đặt lịch hẹn trực tiếp.",
+    "form": {
+      "fullName": "Họ và tên",
+      "phone": "Số điện thoại",
+      "email": "Địa chỉ email",
+      "company": "Công ty (nếu có)",
+      "service": "Dịch vụ quan tâm",
+      "method": "Phương thức tư vấn",
+      "date": "Ngày hẹn",
+      "time": "Giờ hẹn",
+      "message": "Nội dung cần tư vấn",
+      "privacy": "Tôi đồng ý với chính sách bảo mật và điều khoản sử dụng",
+      "submit": "Gửi yêu cầu tư vấn"
+    },
+    "methods": {
+      "office": "Tại văn phòng",
+      "video": "Qua video call",
+      "phone": "Qua điện thoại"
+    },
+    "successMessage": "Yêu cầu của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.",
+    "errorMessage": "Đã có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ trực tiếp qua số điện thoại."
+  },
+  "consultation": {
+    "heading": "Đặt lịch tư vấn",
+    "description": "Điền thông tin bên dưới để đặt lịch tư vấn pháp lý miễn phí với đội ngũ luật sư của chúng tôi.",
+    "steps": {
+      "selectService": "Chọn dịch vụ",
+      "describeMatter": "Mô tả vấn đề",
+      "selectMethod": "Chọn phương thức",
+      "selectDate": "Chọn ngày giờ",
+      "contactInfo": "Thông tin liên hệ",
+      "review": "Xác nhận"
+    },
+    "labels": {
+      "selectServicePlaceholder": "Chọn lĩnh vực pháp lý bạn cần tư vấn",
+      "describeYourMatter": "Mô tả ngắn gọn vấn đề pháp lý của bạn",
+      "preferredMethod": "Bạn muốn tư vấn theo hình thức nào?",
+      "selectAvailableDate": "Chọn ngày và giờ phù hợp",
+      "provideContactInfo": "Vui lòng cung cấp thông tin liên hệ",
+      "reviewAndConfirm": "Kiểm tra lại thông tin và xác nhận"
+    }
+  },
+  "faq": {
+    "heading": "Câu hỏi thường gặp",
+    "description": "Tìm câu trả lời cho những thắc mắc phổ biến về dịch vụ pháp lý của chúng tôi.",
+    "categories": {
+      "general": "Câu hỏi chung",
+      "fees": "Phí dịch vụ",
+      "business": "Doanh nghiệp",
+      "individual": "Cá nhân",
+      "court": "Tố tụng",
+      "online": "Tư vấn trực tuyến",
+      "privacy": "Bảo mật thông tin"
+    }
+  },
+  "careers": {
+    "sectionLabel": "Tuyển dụng",
+    "heading": "Cơ hội nghề nghiệp",
+    "description": "Gia nhập đội ngũ Lighthouse Law và phát triển sự nghiệp pháp lý cùng chúng tôi.",
+    "noOpenings": "Hiện chưa có vị trí tuyển dụng. Bạn vẫn có thể gửi hồ sơ cho các cơ hội tương lai.",
+    "applyNow": "Ứng tuyển ngay",
+    "sendResume": "Gửi hồ sơ",
+    "departments": {
+      "legal": "Pháp lý",
+      "operations": "Vận hành",
+      "marketing": "Marketing"
+    }
+  },
+  "notFound": {
+    "heading": "Không tìm thấy trang",
+    "description": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển.",
+    "actions": {
+      "goHome": "Về trang chủ",
+      "goBack": "Quay lại trang trước",
+      "contactUs": "Liên hệ hỗ trợ"
+    }
+  },
+  "errors": {
+    "required": "Trường này là bắt buộc",
+    "invalidEmail": "Địa chỉ email không hợp lệ",
+    "invalidPhone": "Số điện thoại không hợp lệ",
+    "messageTooShort": "Nội dung quá ngắn, vui lòng nhập ít nhất 20 ký tự",
+    "futureDate": "Vui lòng chọn ngày trong tương lai",
+    "fileSize": "Kích thước tệp vượt quá giới hạn cho phép",
+    "fileType": "Định dạng tệp không được hỗ trợ",
+    "consentRequired": "Bạn cần đồng ý với chính sách bảo mật để tiếp tục"
+  },
+  "serviceDetail": {
+    "ctaButton": "Tư vấn ngay",
+    "whenYouNeed": "Khi nào bạn cần dịch vụ này",
+    "scopeOfServices": "Phạm vi dịch vụ",
+    "legalChallenges": "Thách thức pháp lý thường gặp",
+    "whyChooseUs": "Vì sao chọn Lighthouse Law",
+    "ourProcess": "Quy trình làm việc",
+    "representativeMatters": "Vụ việc đại diện",
+    "representativeMattersNote": "Thông tin đã được ẩn danh để bảo vệ quyền riêng tư của khách hàng.",
+    "faq": "Câu hỏi thường gặp",
+    "relatedServices": "Dịch vụ liên quan"
+  },
+  "metadata": {
+    "siteDescription": "Lighthouse Law - Công ty luật uy tín cung cấp dịch vụ tư vấn pháp lý chuyên nghiệp cho cá nhân và doanh nghiệp tại Việt Nam.",
+    "pageTitles": {
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "services": "Dịch vụ pháp lý",
+      "team": "Đội ngũ luật sư",
+      "offices": "Văn phòng",
+      "insights": "Bài viết & Tin tức",
+      "contact": "Liên hệ",
+      "consultation": "Đặt lịch tư vấn",
+      "careers": "Tuyển dụng",
+      "faq": "Câu hỏi thường gặp",
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản sử dụng",
+      "notFound": "Không tìm thấy trang"
+    }
+  }
+}

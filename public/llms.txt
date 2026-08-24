@@ -1,0 +1,43 @@
+# Lighthouse Law
+
+> Lighthouse Law is a professional law firm in Vietnam providing comprehensive legal services for individuals and businesses.
+
+## About
+
+Lighthouse Law offers 12 areas of legal services including legal consultation, intellectual property, investment & business advisory, corporate law, real estate law, civil law, criminal law, family & marriage law, labor law, tax law, contract drafting, and dispute resolution. We serve both Vietnamese and international clients in Vietnamese and English.
+
+## Services
+
+- Legal Consultation: /vi/services/tu-van-phap-ly
+- Intellectual Property: /vi/services/so-huu-tri-tue
+- Investment & Business Advisory: /vi/services/tu-van-dau-tu-kinh-doanh
+- Corporate Law: /vi/services/luat-doanh-nghiep
+- Real Estate Law: /vi/services/luat-bat-dong-san
+- Civil Law: /vi/services/luat-dan-su
+- Criminal Law: /vi/services/luat-hinh-su
+- Family & Marriage Law: /vi/services/luat-hon-nhan-gia-dinh
+- Labor Law: /vi/services/luat-lao-dong
+- Tax Law: /vi/services/luat-thue
+- Contract Drafting: /vi/services/soan-thao-hop-dong
+- Dispute Resolution: /vi/services/giai-quyet-tranh-chap
+
+## Key Pages
+
+- Homepage: /vi
+- About Us: /vi/company
+- Our Team: /vi/team
+- Contact: /vi/contact
+- FAQ: /vi/faq
+- Insights: /vi/insights
+
+## Contact
+
+- Phone: +84 28 1234 5678
+- Email: contact@lighthouselaw.vn
+- Address: Tầng 12, Tòa nhà ABC, 123 Nguyễn Huệ, Quận 1, TP.HCM, Vietnam
+
+## Languages
+
+This website is available in Vietnamese (default) and English.
+- Vietnamese: /vi
+- English: /en
