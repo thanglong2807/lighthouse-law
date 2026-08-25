@@ -15,15 +15,15 @@ export const offices: OfficeData[] = [
   {
     id: "1",
     slug: "ho-chi-minh",
-    name: { vi: "Văn phòng TP. Hồ Chí Minh", en: "Ho Chi Minh City Office" },
+    name: { vi: "Văn phòng Hà Nội", en: "Hanoi Office" },
     address: {
-      vi: "Tầng 12, Tòa nhà ABC, 123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh",
-      en: "12th Floor, ABC Building, 123 Nguyen Hue, District 1, Ho Chi Minh City",
+      vi: "Số 3 phố Trần Điền, Phường Phương Liệt, Thành phố Hà Nội, Việt Nam",
+      en: "No. 3 Tran Dien Street, Phuong Liet Ward, Hanoi City, Vietnam",
     },
     phone: "+84 28 1234 5678",
     email: "hcm@lighthouselaw.vn",
-    mapUrl: "https://maps.google.com/?q=10.7769,106.7009",
-    coordinates: { lat: 10.7769, lng: 106.7009 },
+    mapUrl: "https://maps.google.com/?q=21.0025,105.8197",
+    coordinates: { lat: 21.0025, lng: 105.8197 },
     isHeadquarters: true,
   },
 ];
