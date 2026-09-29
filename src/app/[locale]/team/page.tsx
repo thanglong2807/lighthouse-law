@@ -10,6 +10,7 @@ import { Breadcrumb } from "@/components/common/breadcrumb";
 import { CTASection } from "@/components/sections";
 import { lawyers } from "@/content/lawyers";
 import { Mail, Phone, ArrowRight } from "lucide-react";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface TeamPageProps {
   params: Promise<{ locale: string }>;
@@ -19,7 +20,7 @@ export async function generateMetadata({
   params,
 }: TeamPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/team", locale as "vi" | "en", {
     title:
       locale === "vi"
         ? "Đội ngũ luật sư"
@@ -32,7 +33,7 @@ export async function generateMetadata({
       canonical: `/${locale}/team`,
       languages: { vi: "/vi/team", en: "/en/team" },
     },
-  };
+  });
 }
 
 export default async function TeamPage({ params }: TeamPageProps) {

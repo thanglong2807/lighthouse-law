@@ -2,6 +2,7 @@ import "server-only";
 
 import type { ArticleData } from "@/content/articles";
 import { getDraftArticles } from "@/lib/articles-store";
+import { sanitizeHtml } from "@/lib/security-crypto";
 
 export async function getAllArticles(): Promise<ArticleData[]> {
   const drafts = await getDraftArticles();
@@ -16,11 +17,19 @@ export async function getAllArticles(): Promise<ArticleData[]> {
     authorSlug: draft.authorSlug,
     publishedAt: draft.publishedAt,
     readingTime: draft.readingTime,
-    content: { vi: draft.content, en: draft.content },
+    content: { vi: sanitizeHtml(draft.content), en: sanitizeHtml(draft.content) },
     seo: {
       title: { vi: draft.seo.title, en: draft.seo.title },
       description: { vi: draft.seo.description, en: draft.seo.description },
       keywords: draft.seo.keywords,
+      primaryKeyword: draft.seo.primaryKeyword,
+      secondaryKeywords: draft.seo.secondaryKeywords,
+      canonical: draft.seo.canonical,
+      ogTitle: draft.seo.ogTitle,
+      ogDescription: draft.seo.ogDescription,
+      ogImage: draft.seo.ogImage,
+      robots: draft.seo.robots,
+      schemaJson: draft.seo.schemaJson,
     },
   }));
 

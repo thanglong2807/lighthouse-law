@@ -7,6 +7,7 @@ import { PageHero } from "@/components/common/page-hero";
 import { Breadcrumb } from "@/components/common/breadcrumb";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Shield, Clock, Users, CheckCircle } from "lucide-react";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface ConsultationPageProps {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({
   params,
 }: ConsultationPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/consultation", locale as "vi" | "en", {
     title:
       locale === "vi"
         ? "Đặt lịch tư vấn"
@@ -29,7 +30,7 @@ export async function generateMetadata({
       canonical: `/${locale}/consultation`,
       languages: { vi: "/vi/consultation", en: "/en/consultation" },
     },
-  };
+  });
 }
 
 export default async function ConsultationPage({
@@ -102,12 +103,22 @@ function ConsultationPageContent() {
 
       <Section variant="light" spacing="lg">
         <Container size="lg">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-3">
-              <h2 className="heading-3 text-text-primary mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+          <div className="lg:col-span-3">
+            <div className="mb-6 rounded-[var(--radius-md)] border border-gold/20 bg-gold/8 p-4">
+              <p className="text-sm font-semibold text-text-primary mb-1">
+                {locale === "vi" ? "Cam kết phản hồi" : "Response promise"}
+              </p>
+              <p className="text-sm text-text-secondary">
                 {locale === "vi"
-                  ? "Gửi yêu cầu tư vấn"
-                  : "Submit Your Consultation Request"}
+                  ? "Chúng tôi sẽ xem xét yêu cầu và phản hồi trong vòng 24 giờ làm việc."
+                  : "We review your request and respond within 24 business hours."}
+              </p>
+            </div>
+            <h2 className="heading-3 text-text-primary mb-6">
+              {locale === "vi"
+                ? "Gửi yêu cầu tư vấn"
+                : "Submit Your Consultation Request"}
               </h2>
               <ContactForm />
             </div>

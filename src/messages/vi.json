@@ -4,6 +4,7 @@
       "learnMore": "Tìm hiểu thêm",
       "contactUs": "Liên hệ",
       "bookConsultation": "Đặt lịch tư vấn",
+      "callNow": "Gọi điện",
       "readMore": "Đọc thêm",
       "viewAll": "Xem tất cả",
       "search": "Tìm kiếm",
@@ -266,23 +267,17 @@
     "description": "Gặp gỡ đội ngũ luật sư giàu kinh nghiệm và tận tâm của chúng tôi.",
     "viewAll": "Xem tất cả thành viên",
     "members": {
-      "nguyen-van-a": {
-        "name": "Nguyễn Văn A",
-        "initials": "NA",
+      "vu-van-dung": {
+        "name": "Vũ Văn Dũng",
+        "initials": "VD",
         "role": "Luật sư điều hành",
         "areas": "Luật doanh nghiệp, Đầu tư kinh doanh"
       },
-      "tran-thi-b": {
-        "name": "Trần Thị B",
-        "initials": "TB",
-        "role": "Đối tác cao cấp",
+      "truong-giang": {
+        "name": "Trường Giang",
+        "initials": "TG",
+        "role": "Luật sư",
         "areas": "Sở hữu trí tuệ, Soạn thảo hợp đồng"
-      },
-      "le-van-c": {
-        "name": "Lê Văn C",
-        "initials": "LC",
-        "role": "Đối tác",
-        "areas": "Giải quyết tranh chấp, Luật hình sự"
       }
     },
     "filters": {
@@ -307,22 +302,22 @@
     "description": "Phản hồi từ những khách hàng đã tin tưởng và sử dụng dịch vụ của chúng tôi.",
     "items": {
       "1": {
-        "quote": "Lighthouse Law đã hỗ trợ xuất sắc trong suốt quá trình tái cơ cấu công ty chúng tôi. Phương pháp chiến lược và sự tỉ mỉ của họ mang lại cho chúng tôi sự tin tưởng ở mọi bước.",
-        "author": "Phạm Minh D",
-        "initials": "PD",
-        "role": "CEO, TechViet Corp"
+        "quote": "Doanh nghiệp của chúng tôi bị vướng thủ tục cấp giấy phép đầu tư gần hai tháng. Các luật sư đã rà soát toàn bộ hồ sơ, chỉ ra điểm chưa phù hợp và hướng dẫn điều chỉnh từng bước. Sau ba tuần, dự án được chấp thuận đúng tiến độ cam kết với đối tác.",
+        "author": "Trần Đức H",
+        "initials": "TH",
+        "role": "Giám đốc pháp chế, doanh nghiệp sản xuất"
       },
       "2": {
-        "quote": "Đội ngũ sở hữu trí tuệ tại Lighthouse Law đã giúp chúng tôi bảo hộ thương hiệu trên khắp Đông Nam Á. Chuyên nghiệp, phản hồi nhanh và có kiến thức sâu rộng.",
-        "author": "Hoàng Thị E",
-        "initials": "HE",
-        "role": "Nhà sáng lập, Creative Solutions"
+        "quote": "Nhãn hiệu của chúng tôi bị một bên khác nộp đơn đăng ký trùng. Đội ngũ sở hữu trí tuệ đã tư vấn phương án phản đối, chuẩn bị hồ sơ và theo sát vụ việc đến khi có quyết định cuối cùng. Kết quả là chúng tôi giữ được quyền đối với nhãn hiệu của mình.",
+        "author": "Lê Thu M",
+        "initials": "LM",
+        "role": "Nhà sáng lập, công ty bán lẻ"
       },
       "3": {
-        "quote": "Khi chúng tôi gặp tranh chấp bất động sản phức tạp, các luật sư của Lighthouse Law đã xử lý tình huống một cách khéo léo. Chúng tôi đạt được kết quả thuận lợi nhờ sự tận tâm của họ.",
-        "author": "Võ Văn F",
-        "initials": "VF",
-        "role": "Giám đốc, Saigon Invest Group"
+        "quote": "Gia đình tôi có tranh chấp đất đai kéo dài nhiều năm. Luật sư đã phân tích hồ sơ, giải thích rõ quyền lợi hợp pháp và đại diện đàm phán với các bên liên quan. Cuối cùng chúng tôi đạt được thỏa thuận hợp lý mà không cần ra tòa.",
+        "author": "Phạm Quang T",
+        "initials": "PT",
+        "role": "Khách hàng cá nhân"
       }
     }
   },
@@ -340,7 +335,7 @@
         "readTime": "5",
         "title": "Những thay đổi quan trọng trong Luật Doanh nghiệp mới 2026",
         "excerpt": "Tổng quan về các sửa đổi đáng chú ý của Luật Doanh nghiệp và tác động đối với các doanh nghiệp hoạt động tại Việt Nam.",
-        "author": "Nguyễn Văn A"
+        "author": "Vũ Văn Dũng"
       },
       "2": {
         "category": "Phân tích chuyên sâu",
@@ -348,7 +343,7 @@
         "readTime": "8",
         "title": "Bảo vệ sở hữu trí tuệ trong kỷ nguyên số",
         "excerpt": "Cách doanh nghiệp có thể bảo vệ nhãn hiệu, bằng sáng chế và bản quyền trong thị trường ngày càng số hóa.",
-        "author": "Trần Thị B"
+        "author": "Trường Giang"
       },
       "3": {
         "category": "Hướng dẫn",
@@ -356,7 +351,7 @@
         "readTime": "6",
         "title": "Đầu tư nước ngoài tại Việt Nam: Hướng dẫn toàn diện",
         "excerpt": "Các bước thiết yếu, yêu cầu pháp lý và lời khuyên thực tiễn cho nhà đầu tư nước ngoài muốn hiện diện tại Việt Nam.",
-        "author": "Lê Văn C"
+        "author": "Trường Giang"
       }
     },
     "categories": {
@@ -403,6 +398,7 @@
       "video": "Qua video call",
       "phone": "Qua điện thoại"
     },
+    "responseTimePromise": "Phản hồi trong 24 giờ làm việc",
     "successMessage": "Yêu cầu của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.",
     "errorMessage": "Đã có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ trực tiếp qua số điện thoại."
   },
@@ -424,6 +420,21 @@
       "selectAvailableDate": "Chọn ngày và giờ phù hợp",
       "provideContactInfo": "Vui lòng cung cấp thông tin liên hệ",
       "reviewAndConfirm": "Kiểm tra lại thông tin và xác nhận"
+    }
+  },
+  "thankYou": {
+    "heading": "Cảm ơn bạn đã liên hệ",
+    "description": "Yêu cầu tư vấn của bạn đã được tiếp nhận thành công. Đội ngũ luật sư của chúng tôi sẽ xem xét và liên hệ lại với bạn trong vòng 24 giờ làm việc.",
+    "stepsTitle": "Điều gì xảy ra tiếp theo?",
+    "steps": {
+      "review": "Luật sư phụ trách sẽ xem xét nội dung yêu cầu của bạn.",
+      "contact": "Chúng tôi sẽ gọi điện hoặc gửi email để xác nhận lịch tư vấn.",
+      "advise": "Bạn nhận được tư vấn pháp lý phù hợp với vấn đề của mình."
+    },
+    "meanwhile": "Trong lúc chờ đợi, bạn có thể tham khảo các bài viết pháp lý từ đội ngũ luật sư của chúng tôi.",
+    "actions": {
+      "goHome": "Về trang chủ",
+      "viewInsights": "Xem bài viết"
     }
   },
   "faq": {

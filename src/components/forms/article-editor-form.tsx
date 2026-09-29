@@ -38,11 +38,17 @@ export function ArticleEditorForm({ onSubmit }: Props) {
       category: "corporate",
       publishedAt: new Date().toISOString().slice(0, 10),
       readingTime: 5,
-      authorSlug: "nguyen-van-a",
+      authorSlug: "vu-van-dung",
       featuredImage: "/og-image.jpg",
       seoKeywords: "",
+      primaryKeyword: "",
+      secondaryKeywords: "",
       canonical: "/vi/insights/",
+      ogTitle: "",
+      ogDescription: "",
       ogImage: "",
+      robots: "index,follow",
+      schemaJson: "",
       tags: [],
       practiceAreas: [],
       relatedServiceSlugs: [],
@@ -88,18 +94,26 @@ export function ArticleEditorForm({ onSubmit }: Props) {
         <Field label="Slug tac gia" {...register("authorSlug")} />
         <Field label="Anh dai dien" {...register("featuredImage")} />
         <Field label="Danh muc" {...register("category")} />
-        <Field label="SEO Title" {...register("seoTitle")} />
-        <Field label="Canonical" {...register("canonical")} />
+        <Field label="Meta title" {...register("seoTitle")} />
+        <Field label="Canonical URL" {...register("canonical")} />
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
         <Field label="Excerpt" textarea {...register("excerpt")} />
-        <Field label="SEO Description" textarea {...register("seoDescription")} />
+        <Field label="Meta description" textarea {...register("seoDescription")} />
+      </div>
+
+      <div className="rounded-2xl border border-gold/30 bg-gold/5 p-5">
+        <p className="mb-4 text-sm font-semibold text-text-primary">Từ khóa SEO</p>
+        <div className="grid gap-4 md:grid-cols-2">
+          <Field label="Từ khóa chính" {...register("primaryKeyword")} />
+          <Field label="Từ khóa phụ (cách nhau bằng dấu phẩy)" {...register("secondaryKeywords")} />
+        </div>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
         <Field
-          label="Keywords (phan tach bang dau phay)"
+          label="Keywords meta bổ sung (cách nhau bằng dấu phẩy)"
           {...register("seoKeywords")}
         />
         <Field
@@ -113,6 +127,17 @@ export function ArticleEditorForm({ onSubmit }: Props) {
           })}
         />
         <Field label="Ngay dang" type="date" {...register("publishedAt")} />
+      </div>
+
+      <div className="rounded-2xl border border-border bg-surface p-5">
+        <p className="mb-4 text-sm font-semibold text-text-primary">Meta mạng xã hội và robots</p>
+        <div className="grid gap-4 md:grid-cols-2">
+          <Field label="OG title" {...register("ogTitle")} />
+          <Field label="OG image URL" {...register("ogImage")} />
+          <Field label="OG description" textarea {...register("ogDescription")} />
+          <label className="block"><span className="mb-1.5 block text-sm font-medium text-text-primary">Robots</span><select className="form-input" {...register("robots")}><option value="index,follow">index, follow</option><option value="noindex,follow">noindex, follow</option><option value="index,nofollow">index, nofollow</option><option value="noindex,nofollow">noindex, nofollow</option></select></label>
+        </div>
+        <label className="mt-4 block"><span className="mb-1.5 block text-sm font-medium text-text-primary">Schema JSON-LD tùy chỉnh (không bắt buộc)</span><textarea className="form-input min-h-32 font-mono text-xs" placeholder='{"@type":"Article"}' {...register("schemaJson")} /></label>
       </div>
 
       <div className="rounded-2xl border border-border bg-surface p-4">

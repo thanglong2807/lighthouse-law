@@ -34,9 +34,15 @@ const draftArticleSchema = z.object({
   seo: z.object({
     title: z.string().min(5),
     description: z.string().min(20),
+    primaryKeyword: z.string().default(""),
+    secondaryKeywords: z.array(z.string()).default([]),
     keywords: z.array(z.string()).default([]),
     canonical: z.string().min(1),
+    ogTitle: z.string().optional(),
+    ogDescription: z.string().optional(),
     ogImage: z.string().optional(),
+    robots: z.string().default("index,follow"),
+    schemaJson: z.string().optional(),
   }),
   status: z.enum(["draft", "published"]).default("published"),
 });
@@ -74,11 +80,30 @@ function getDb() {
       seoKeywords TEXT NOT NULL,
       canonical TEXT NOT NULL,
       ogImage TEXT,
+      primaryKeyword TEXT NOT NULL DEFAULT '',
+      secondaryKeywords TEXT NOT NULL DEFAULT '[]',
+      ogTitle TEXT,
+      ogDescription TEXT,
+      robots TEXT NOT NULL DEFAULT 'index,follow',
+      schemaJson TEXT,
       status TEXT NOT NULL,
       createdAt TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
       updatedAt TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
     );
   `);
+  const columns = db.prepare("PRAGMA table_info(articles)").all() as { name: string }[];
+  const existing = new Set(columns.map((column) => column.name));
+  const migrations: [string, string][] = [
+    ["primaryKeyword", "TEXT NOT NULL DEFAULT ''"],
+    ["secondaryKeywords", "TEXT NOT NULL DEFAULT '[]'"],
+    ["ogTitle", "TEXT"],
+    ["ogDescription", "TEXT"],
+    ["robots", "TEXT NOT NULL DEFAULT 'index,follow'"],
+    ["schemaJson", "TEXT"],
+  ];
+  for (const [name, definition] of migrations) {
+    if (!existing.has(name)) db.exec(`ALTER TABLE articles ADD COLUMN ${name} ${definition}`);
+  }
   return db;
 }
 
@@ -103,9 +128,15 @@ function mapRow(row: any): DraftArticleInput {
     seo: {
       title: row.seoTitle,
       description: row.seoDescription,
+      primaryKeyword: row.primaryKeyword || "",
+      secondaryKeywords: JSON.parse(row.secondaryKeywords || "[]"),
       keywords: JSON.parse(row.seoKeywords || "[]"),
       canonical: row.canonical,
+      ogTitle: row.ogTitle || undefined,
+      ogDescription: row.ogDescription || undefined,
       ogImage: row.ogImage || undefined,
+      robots: row.robots || "index,follow",
+      schemaJson: row.schemaJson || undefined,
     },
     status: row.status,
   });
@@ -146,8 +177,13 @@ function seedStaticArticles(db: any) {
     seo: {
       title: article.title.vi,
       description: article.excerpt.vi,
+      primaryKeyword: article.seo?.keywords?.[0] ?? "",
+      secondaryKeywords: article.seo?.keywords?.slice(1) ?? [],
       keywords: article.seo?.keywords ?? [],
       canonical: `${siteConfig.domain}/vi/insights/${article.slug}`,
+      ogTitle: article.title.vi,
+      ogDescription: article.excerpt.vi,
+      robots: "index,follow",
       ogImage: undefined,
     },
     status: "published",
@@ -165,6 +201,12 @@ function seedStaticArticles(db: any) {
         seoKeywords: JSON.stringify(row.seo.keywords ?? []),
         canonical: row.seo.canonical,
         ogImage: row.seo.ogImage ?? null,
+        primaryKeyword: row.seo.primaryKeyword ?? "",
+        secondaryKeywords: JSON.stringify(row.seo.secondaryKeywords ?? []),
+        ogTitle: row.seo.ogTitle ?? null,
+        ogDescription: row.seo.ogDescription ?? null,
+        robots: row.seo.robots ?? "index,follow",
+        schemaJson: row.seo.schemaJson ?? null,
       });
     }
   });
@@ -214,6 +256,12 @@ export async function addDraftArticle(input: DraftArticleInput) {
           seoKeywords=@seoKeywords,
           canonical=@canonical,
           ogImage=@ogImage,
+          primaryKeyword=@primaryKeyword,
+          secondaryKeywords=@secondaryKeywords,
+          ogTitle=@ogTitle,
+          ogDescription=@ogDescription,
+          robots=@robots,
+          schemaJson=@schemaJson,
           status=@status,
           updatedAt=CURRENT_TIMESTAMP
         WHERE slug=@slug
@@ -223,10 +271,12 @@ export async function addDraftArticle(input: DraftArticleInput) {
           id, slug, locale, title, excerpt, content, category, contentType, publishedAt, readingTime,
           authorName, authorSlug, featuredImage, tags, practiceAreas, relatedServiceSlugs,
           seoTitle, seoDescription, seoKeywords, canonical, ogImage, status
+          , primaryKeyword, secondaryKeywords, ogTitle, ogDescription, robots, schemaJson
         ) VALUES (
           @id, @slug, @locale, @title, @excerpt, @content, @category, @contentType, @publishedAt, @readingTime,
           @authorName, @authorSlug, @featuredImage, @tags, @practiceAreas, @relatedServiceSlugs,
-          @seoTitle, @seoDescription, @seoKeywords, @canonical, @ogImage, @status
+          @seoTitle, @seoDescription, @seoKeywords, @canonical, @ogImage, @status,
+          @primaryKeyword, @secondaryKeywords, @ogTitle, @ogDescription, @robots, @schemaJson
         )
       `);
 
@@ -240,6 +290,12 @@ export async function addDraftArticle(input: DraftArticleInput) {
     seoKeywords: JSON.stringify(input.seo.keywords ?? []),
     canonical: input.seo.canonical,
     ogImage: input.seo.ogImage ?? null,
+    primaryKeyword: input.seo.primaryKeyword ?? "",
+    secondaryKeywords: JSON.stringify(input.seo.secondaryKeywords ?? []),
+    ogTitle: input.seo.ogTitle ?? null,
+    ogDescription: input.seo.ogDescription ?? null,
+    robots: input.seo.robots ?? "index,follow",
+    schemaJson: input.seo.schemaJson ?? null,
   });
   db.close();
   return input;

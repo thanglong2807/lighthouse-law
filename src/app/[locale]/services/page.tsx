@@ -10,6 +10,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import { services as serviceContent } from "@/content/services";
 import { SERVICE_SLUGS, URL_TO_CONTENT_SLUG } from "@/content/service-slugs";
 import { ServiceFilterGrid } from "./_components/service-filter-grid";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 /* ──────────────────────────────────────────────
    Prepare service entries for the client filter grid
@@ -41,14 +42,14 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "services" });
   const meta = await getTranslations({ locale, namespace: "metadata" });
 
-  return {
+  return applyPageSeo("/services", locale as "vi" | "en", {
     title: meta("pageTitles.services"),
     description: t("sectionDescription"),
     alternates: {
-      canonical: "/services",
+      canonical: `/${locale}/services`,
       languages: { vi: "/vi/services", en: "/en/services" },
     },
-  };
+  });
 }
 
 /* ──────────────────────────────────────────────

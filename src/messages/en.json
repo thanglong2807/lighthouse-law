@@ -4,6 +4,7 @@
       "learnMore": "Learn More",
       "contactUs": "Contact Us",
       "bookConsultation": "Book a Consultation",
+      "callNow": "Call Now",
       "readMore": "Read More",
       "viewAll": "View All",
       "search": "Search",
@@ -266,23 +267,17 @@
     "description": "Meet our experienced and dedicated team of attorneys.",
     "viewAll": "View All Team Members",
     "members": {
-      "nguyen-van-a": {
-        "name": "Nguyen Van A",
-        "initials": "NA",
-        "role": "Managing Partner",
+      "vu-van-dung": {
+        "name": "Vu Van Dung",
+        "initials": "VD",
+        "role": "Managing Lawyer",
         "areas": "Corporate Law, Investment & Business"
       },
-      "tran-thi-b": {
-        "name": "Tran Thi B",
-        "initials": "TB",
-        "role": "Senior Partner",
+      "truong-giang": {
+        "name": "Truong Giang",
+        "initials": "TG",
+        "role": "Lawyer",
         "areas": "Intellectual Property, Contract Drafting"
-      },
-      "le-van-c": {
-        "name": "Le Van C",
-        "initials": "LC",
-        "role": "Partner",
-        "areas": "Dispute Resolution, Criminal Law"
       }
     },
     "filters": {
@@ -307,22 +302,22 @@
     "description": "Feedback from clients who have trusted us with their legal matters.",
     "items": {
       "1": {
-        "quote": "Lighthouse Law provided exceptional guidance throughout our company's restructuring. Their strategic approach and attention to detail gave us confidence at every step.",
-        "author": "Pham Minh D",
-        "initials": "PD",
-        "role": "CEO, TechViet Corp"
+        "quote": "Our company was stuck on investment licensing procedures for nearly two months. The attorneys reviewed our entire file, identified the issues, and guided us through each correction. Within three weeks, our project was approved in time for our commitment to partners.",
+        "author": "Tran Duc H",
+        "initials": "TH",
+        "role": "Head of Legal, Manufacturing Company"
       },
       "2": {
-        "quote": "The intellectual property team at Lighthouse Law helped us protect our brand across Southeast Asia. Professional, responsive, and thoroughly knowledgeable.",
-        "author": "Hoang Thi E",
-        "initials": "HE",
-        "role": "Founder, Creative Solutions"
+        "quote": "A third party filed to register a mark identical to our brand. The intellectual property team advised on the opposition strategy, prepared the filings, and followed the case closely through to the final decision. We retained our trademark rights.",
+        "author": "Le Thu M",
+        "initials": "LM",
+        "role": "Founder, Retail Company"
       },
       "3": {
-        "quote": "When we faced a complex real estate dispute, Lighthouse Law's attorneys navigated the situation with remarkable skill. We achieved a favorable outcome thanks to their dedication.",
-        "author": "Vo Van F",
-        "initials": "VF",
-        "role": "Director, Saigon Invest Group"
+        "quote": "Our family had a land dispute that had dragged on for years. The attorney analyzed our documents, clearly explained our lawful rights, and represented us in negotiations with the other parties. In the end, we reached a fair settlement without going to court.",
+        "author": "Pham Quang T",
+        "initials": "PT",
+        "role": "Individual Client"
       }
     }
   },
@@ -403,6 +398,7 @@
       "video": "Via Video Call",
       "phone": "Via Phone"
     },
+    "responseTimePromise": "We respond within 24 business hours",
     "successMessage": "Your request has been submitted successfully. We will get back to you as soon as possible.",
     "errorMessage": "An error occurred. Please try again or contact us directly by phone."
   },
@@ -424,6 +420,21 @@
       "selectAvailableDate": "Select an available date and time",
       "provideContactInfo": "Please provide your contact information",
       "reviewAndConfirm": "Review your information and confirm"
+    }
+  },
+  "thankYou": {
+    "heading": "Thank You for Contacting Us",
+    "description": "Your consultation request has been received successfully. Our team of attorneys will review it and get back to you within 24 business hours.",
+    "stepsTitle": "What happens next?",
+    "steps": {
+      "review": "The attorney in charge will review the details of your request.",
+      "contact": "We will call or email you to confirm your consultation schedule.",
+      "advise": "You will receive legal advice tailored to your matter."
+    },
+    "meanwhile": "In the meantime, feel free to explore legal insights from our team of attorneys.",
+    "actions": {
+      "goHome": "Go to Homepage",
+      "viewInsights": "View Insights"
     }
   },
   "faq": {

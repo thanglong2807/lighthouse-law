@@ -24,8 +24,8 @@ export const brand = {
   },
 
   typography: {
-    fontHeading: '"Playfair Display", Georgia, "Times New Roman", serif',
-    fontBody: '"Poppins", system-ui, -apple-system, sans-serif',
+    fontHeading: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    fontBody: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
     scale: {
       displayXl: {
         fontSize: "4rem",

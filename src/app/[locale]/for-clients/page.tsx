@@ -16,6 +16,7 @@ import {
   HelpCircle,
   ArrowRight,
 } from "lucide-react";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface ForClientsPageProps {
   params: Promise<{ locale: string }>;
@@ -25,7 +26,7 @@ export async function generateMetadata({
   params,
 }: ForClientsPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/for-clients", locale as "vi" | "en", {
     title:
       locale === "vi"
         ? "Dành cho khách hàng"
@@ -38,7 +39,7 @@ export async function generateMetadata({
       canonical: `/${locale}/for-clients`,
       languages: { vi: "/vi/for-clients", en: "/en/for-clients" },
     },
-  };
+  });
 }
 
 export default async function ForClientsPage({ params }: ForClientsPageProps) {

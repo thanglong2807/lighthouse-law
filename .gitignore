@@ -24,6 +24,12 @@ yarn-error.log*
 .env
 .env*.local
 
+# Runtime data and backups must be kept outside Git and protected by the server account.
+data/*.sqlite
+data/*.sqlite-*
+data/*.csv
+data/*.enc
+
 # vercel
 .vercel
 

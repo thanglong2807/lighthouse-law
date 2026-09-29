@@ -10,7 +10,19 @@ export interface ArticleData {
   publishedAt: string;
   readingTime: number;
   content?: { vi: string; en: string };
-  seo?: { title?: { vi: string; en: string }; description?: { vi: string; en: string }; keywords?: string[] };
+  seo?: {
+    title?: { vi: string; en: string };
+    description?: { vi: string; en: string };
+    keywords?: string[];
+    primaryKeyword?: string;
+    secondaryKeywords?: string[];
+    canonical?: string;
+    ogTitle?: string;
+    ogDescription?: string;
+    ogImage?: string;
+    robots?: string;
+    schemaJson?: string;
+  };
 }
 
 // TODO: Replace with real article content
@@ -28,8 +40,8 @@ export const articles: ArticleData[] = [
     },
     image: "/images/articles/huong-dan-thanh-lap-doanh-nghiep.jpg",
     category: "corporate",
-    author: "Nguyễn Văn A",
-    authorSlug: "nguyen-van-a",
+    author: "Vũ Văn Dũng",
+    authorSlug: "vu-van-dung",
     publishedAt: "2024-03-15",
     readingTime: 8,
   },
@@ -46,8 +58,8 @@ export const articles: ArticleData[] = [
     },
     image: "/images/articles/bao-ho-nhan-hieu.jpg",
     category: "ip",
-    author: "Trần Thị B",
-    authorSlug: "tran-thi-b",
+    author: "Trường Giang",
+    authorSlug: "truong-giang",
     publishedAt: "2024-02-20",
     readingTime: 6,
   },
@@ -64,8 +76,8 @@ export const articles: ArticleData[] = [
     },
     image: "/images/articles/giai-quyet-tranh-chap.jpg",
     category: "dispute",
-    author: "Lê Văn C",
-    authorSlug: "le-van-c",
+    author: "Trường Giang",
+    authorSlug: "truong-giang",
     publishedAt: "2024-01-10",
     readingTime: 10,
   },

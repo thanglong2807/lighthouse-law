@@ -102,17 +102,17 @@ export function ServiceFilterGrid({ services }: ServiceFilterGridProps) {
             className="group relative p-6 bg-surface rounded-[var(--radius-md)] border border-border hover:border-gold/30 transition-all duration-300 hover:shadow-[var(--shadow-md)]"
           >
             {/* Number */}
-            <span className="text-xs font-mono text-text-tertiary mb-4 block">
+            <span className="text-xs font-mono text-text-tertiary mb-4 block tracking-[0.12em]">
               {String(service.index + 1).padStart(2, "0")}
             </span>
 
             {/* Title */}
-            <h3 className="heading-4 text-text-primary mb-2 group-hover:text-gold-dark transition-colors">
+            <h3 className="mb-2 text-[1.05rem] font-semibold leading-snug tracking-normal text-text-primary font-sans group-hover:text-gold-dark transition-colors">
               {t(`items.${service.urlSlug}.title`)}
             </h3>
 
             {/* Short description */}
-            <p className="body-sm text-text-secondary mb-4 line-clamp-2">
+            <p className="text-sm leading-6 text-text-secondary mb-4 line-clamp-2 font-sans">
               {t(`items.${service.urlSlug}.short`)}
             </p>
 

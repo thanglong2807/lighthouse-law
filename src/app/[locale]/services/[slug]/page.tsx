@@ -60,7 +60,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `/services/${slug}`,
+      canonical: `/${locale}/services/${slug}`,
       languages: {
         vi: `/vi/services/${slug}`,
         en: `/en/services/${slug}`,
@@ -176,8 +176,9 @@ export default async function ServiceDetailPage({
       telephone: siteConfig.contact.phone,
       address: {
         "@type": "PostalAddress",
-        streetAddress: siteConfig.contact.address,
-        addressLocality: "Ho Chi Minh City",
+        streetAddress: "Số 3 phố Trần Điền",
+        addressLocality: "Phường Phương Liệt",
+        addressRegion: "Thành phố Hà Nội",
         addressCountry: "VN",
       },
     },

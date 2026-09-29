@@ -7,4 +7,5 @@ export { IndustriesServed } from "./industries-served";
 export { TeamPreview } from "./team-preview";
 export { Testimonials } from "./testimonials";
 export { LatestInsights } from "./latest-insights";
+export { CaseStudies } from "./case-studies";
 export { CTASection } from "./cta-section";

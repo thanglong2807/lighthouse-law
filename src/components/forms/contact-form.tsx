@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -42,6 +43,7 @@ export function ContactForm() {
   const t = useTranslations("contact");
   const tServices = useTranslations("services");
   const tErrors = useTranslations("errors");
+  const router = useRouter();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const {
@@ -71,6 +73,7 @@ export function ContactForm() {
       if (result.success) {
         setStatus("success");
         reset();
+        router.push("/consultation/thank-you");
       } else {
         setStatus("error");
       }

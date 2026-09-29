@@ -4,6 +4,7 @@ import { Container } from "@/components/layout";
 import { Section } from "@/components/layout/section";
 import { PageHero } from "@/components/common/page-hero";
 import { Breadcrumb } from "@/components/common/breadcrumb";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface PrivacyPageProps {
   params: Promise<{ locale: string }>;
@@ -12,7 +13,7 @@ interface PrivacyPageProps {
 export async function generateMetadata({ params }: PrivacyPageProps): Promise<Metadata> {
   const { locale } = await params;
 
-  return {
+  return applyPageSeo("/privacy-policy", locale as "vi" | "en", {
     title: locale === "vi" ? "Chính sách bảo mật" : "Privacy Policy",
     description:
       locale === "vi"
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
       languages: { vi: "/vi/privacy-policy", en: "/en/privacy-policy" },
     },
     robots: { index: true, follow: true },
-  };
+  });
 }
 
 export default async function PrivacyPolicyPage({ params }: PrivacyPageProps) {

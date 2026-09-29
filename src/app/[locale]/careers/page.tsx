@@ -7,6 +7,7 @@ import { PageHero } from "@/components/common/page-hero";
 import { Breadcrumb } from "@/components/common/breadcrumb";
 import { CTASection } from "@/components/sections";
 import { Briefcase, Heart, TrendingUp, Users } from "lucide-react";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface CareersPageProps {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({
   params,
 }: CareersPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/careers", locale as "vi" | "en", {
     title:
       locale === "vi"
         ? "Tuyển dụng"
@@ -29,7 +30,7 @@ export async function generateMetadata({
       canonical: `/${locale}/careers`,
       languages: { vi: "/vi/careers", en: "/en/careers" },
     },
-  };
+  });
 }
 
 export default async function CareersPage({ params }: CareersPageProps) {

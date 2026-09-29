@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
-import { articles } from "@/content/articles";
+import { lawyers } from "@/content/lawyers";
 import { getAllArticles } from "@/lib/articles-data";
 
 const baseUrl = siteConfig.domain;
@@ -20,7 +20,7 @@ const servicesSlugs = [
   "giai-quyet-tranh-chap",
 ];
 
-const lawyerSlugs = ["nguyen-van-a", "tran-thi-b", "le-van-c"];
+const lawyerSlugs = lawyers.map((lawyer) => lawyer.slug);
 
 const staticPages = [
   "",
@@ -51,6 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         languages: {
           vi: `${baseUrl}/vi${page}`,
           en: `${baseUrl}/en${page}`,
+          "x-default": `${baseUrl}/vi${page}`,
         },
       },
     });
@@ -66,6 +67,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         languages: {
           vi: `${baseUrl}/vi/services/${slug}`,
           en: `${baseUrl}/en/services/${slug}`,
+          "x-default": `${baseUrl}/vi/services/${slug}`,
         },
       },
     });
@@ -81,6 +83,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         languages: {
           vi: `${baseUrl}/vi/team/${slug}`,
           en: `${baseUrl}/en/team/${slug}`,
+          "x-default": `${baseUrl}/vi/team/${slug}`,
         },
       },
     });
@@ -97,6 +100,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         languages: {
           vi: `${baseUrl}/vi/insights/${article.slug}`,
           en: `${baseUrl}/en/insights/${article.slug}`,
+          "x-default": `${baseUrl}/vi/insights/${article.slug}`,
         },
       },
     });

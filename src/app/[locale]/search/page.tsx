@@ -9,6 +9,7 @@ import { getAllArticles } from "@/lib/articles-data";
 import { articles as staticArticles } from "@/content/articles";
 import { lawyers } from "@/content/lawyers";
 import { services } from "@/content/services";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface SearchPageProps {
   params: Promise<{ locale: string }>;
@@ -19,10 +20,10 @@ export async function generateMetadata({
   params,
 }: SearchPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/search", locale as "vi" | "en", {
     title: locale === "vi" ? "Tìm kiếm" : "Search",
     robots: { index: false, follow: true },
-  };
+  });
 }
 
 export default async function SearchPage({ params, searchParams }: SearchPageProps) {

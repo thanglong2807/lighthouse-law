@@ -29,9 +29,15 @@ export const articleFormSchema = z.object({
   relatedServiceSlugs: z.array(z.string()).default([]),
   seoTitle: z.string().min(5),
   seoDescription: z.string().min(20),
+  primaryKeyword: z.string().min(1),
+  secondaryKeywords: z.string().optional().default(""),
   seoKeywords: z.string().optional().default(""),
   canonical: z.string().min(1),
+  ogTitle: z.string().optional().default(""),
+  ogDescription: z.string().optional().default(""),
   ogImage: z.string().optional().default(""),
+  robots: z.string().min(1).default("index,follow"),
+  schemaJson: z.string().optional().default(""),
   status: z.enum(["draft", "published"]).default("published"),
 });
 

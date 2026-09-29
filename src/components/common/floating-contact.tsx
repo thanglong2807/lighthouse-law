@@ -47,7 +47,7 @@ const contactMethods = [
 ];
 
 export function FloatingContactWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
@@ -69,7 +69,7 @@ export function FloatingContactWidget() {
   }, [isOpen]);
 
   return (
-    <div className="fixed bottom-6 right-6 z-[500] flex flex-col items-end gap-3">
+    <div className="fixed bottom-6 right-6 z-[500] flex flex-col items-center gap-1.5">
       <AnimatePresence>
         {showBackToTop && (
           <motion.button
@@ -93,7 +93,7 @@ export function FloatingContactWidget() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="flex flex-col items-end gap-2.5"
+            className="flex flex-col items-center gap-1.5"
           >
             {contactMethods.map((method, index) => {
               const IconEl = method.IconComponent ?? method.icon;
@@ -110,10 +110,10 @@ export function FloatingContactWidget() {
                     duration: 0.2,
                     delay: (contactMethods.length - 1 - index) * 0.04,
                   }}
-                  className="group flex items-center gap-2"
+                  className="group relative flex items-center justify-center"
                 >
                   <span
-                    className="px-3 py-1.5 rounded-md text-xs font-medium tracking-wide text-white shadow-lg opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 pointer-events-none"
+                    className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap px-3 py-1.5 rounded-md text-xs font-medium tracking-wide text-white shadow-lg opacity-0 translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 pointer-events-none"
                     style={{ backgroundColor: "rgba(0,17,45,0.9)" }}
                   >
                     {method.name}
@@ -133,7 +133,7 @@ export function FloatingContactWidget() {
         )}
       </AnimatePresence>
 
-      <div className="relative">
+      <div className="relative flex justify-center">
         {!isOpen && (
           <span
             className="absolute inset-0 rounded-full animate-ping"

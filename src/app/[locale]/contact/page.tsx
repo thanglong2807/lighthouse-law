@@ -8,6 +8,7 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { CTASection } from "@/components/sections";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface ContactPageProps {
   params: Promise<{ locale: string }>;
@@ -17,7 +18,7 @@ export async function generateMetadata({
   params,
 }: ContactPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/contact", locale as "vi" | "en", {
     title:
       locale === "vi"
         ? "Liên hệ"
@@ -26,7 +27,11 @@ export async function generateMetadata({
       locale === "vi"
         ? "Liên hệ với Lighthouse Law để được tư vấn pháp lý chuyên nghiệp."
         : "Contact Lighthouse Law for professional legal consultation.",
-  };
+    alternates: {
+      canonical: `/${locale}/contact`,
+      languages: { vi: "/vi/contact", en: "/en/contact" },
+    },
+  });
 }
 
 export default async function ContactPage({ params }: ContactPageProps) {

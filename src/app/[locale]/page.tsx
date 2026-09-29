@@ -7,10 +7,12 @@ import { PracticeAreas } from "@/components/sections/practice-areas";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { IndustriesServed } from "@/components/sections/industries-served";
 import { TeamPreview } from "@/components/sections/team-preview";
+import { CaseStudies } from "@/components/sections/case-studies";
 import { Testimonials } from "@/components/sections/testimonials";
 import { LatestInsights } from "@/components/sections/latest-insights";
 import { CTASection } from "@/components/sections/cta-section";
 import { getOrganizationSchema, getWebSiteSchema } from "@/lib/schema";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -20,7 +22,7 @@ export async function generateMetadata({
   params,
 }: HomePageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/", locale as "vi" | "en", {
     title:
       locale === "vi"
         ? "Lighthouse Law | Tư vấn Pháp lý - Sở hữu Trí tuệ - Đầu tư Kinh doanh"
@@ -33,7 +35,7 @@ export async function generateMetadata({
       canonical: `/${locale}`,
       languages: { vi: "/vi", en: "/en" },
     },
-  };
+  });
 }
 
 export default async function HomePage({ params }: HomePageProps) {
@@ -49,6 +51,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <WhyChooseUs />
       <IndustriesServed />
       <TeamPreview />
+      <CaseStudies />
       <Testimonials />
       <LatestInsights />
       <CTASection />

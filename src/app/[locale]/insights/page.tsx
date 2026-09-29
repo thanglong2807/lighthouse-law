@@ -9,6 +9,7 @@ import { Breadcrumb } from "@/components/common/breadcrumb";
 import { CTASection } from "@/components/sections";
 import { getAllArticles } from "@/lib/articles-data";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface InsightsPageProps {
   params: Promise<{ locale: string }>;
@@ -18,7 +19,7 @@ export async function generateMetadata({
   params,
 }: InsightsPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/insights", locale as "vi" | "en", {
     title: locale === "vi" ? "Bài viết & Tin tức" : "Insights & News",
     description:
       locale === "vi"
@@ -28,7 +29,7 @@ export async function generateMetadata({
       canonical: `/${locale}/insights`,
       languages: { vi: "/vi/insights", en: "/en/insights" },
     },
-  };
+  });
 }
 
 export default async function InsightsPage({ params }: InsightsPageProps) {

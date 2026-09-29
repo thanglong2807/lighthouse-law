@@ -11,10 +11,13 @@ export const metadata: Metadata = {
 
 export default async function AdminLoginPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ error?: string }>;
 }) {
   const { locale } = await params;
+  const { error } = await searchParams;
   setRequestLocale(locale);
 
   return (
@@ -32,6 +35,20 @@ export default async function AdminLoginPage({
             }}
             className="space-y-4"
           >
+            <input type="hidden" name="locale" value={locale} />
+            {error && (
+              <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
+                {error === "config"
+                  ? "Hệ thống quản trị chưa được cấu hình."
+                  : error === "rate"
+                    ? "Bạn thử đăng nhập sai quá nhiều lần. Vui lòng chờ 15 phút."
+                    : "Email hoặc mật khẩu không đúng."}
+              </p>
+            )}
+            <label className="block">
+              <span className="mb-1.5 block text-sm font-medium text-text-primary">Email quản trị</span>
+              <input name="email" type="email" autoComplete="username" className="form-input" required />
+            </label>
             <label className="block">
               <span className="mb-1.5 block text-sm font-medium text-text-primary">Mật khẩu</span>
               <input

@@ -32,10 +32,12 @@ export async function generateMetadata({
 
   const loc = locale as "vi" | "en";
   return {
-    title: article.title[loc],
-    description: article.excerpt[loc],
+    title: article.seo?.title?.[loc] || article.title[loc],
+    description: article.seo?.description?.[loc] || article.excerpt[loc],
+    keywords: article.seo?.keywords,
+    robots: article.seo?.robots,
     alternates: {
-      canonical: `/${locale}/insights/${slug}`,
+      canonical: article.seo?.canonical || `/${locale}/insights/${slug}`,
       languages: {
         vi: `/vi/insights/${slug}`,
         en: `/en/insights/${slug}`,
@@ -43,8 +45,9 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "article",
-      title: article.title[loc],
-      description: article.excerpt[loc],
+      title: article.seo?.ogTitle || article.seo?.title?.[loc] || article.title[loc],
+      description: article.seo?.ogDescription || article.seo?.description?.[loc] || article.excerpt[loc],
+      images: article.seo?.ogImage ? [article.seo.ogImage] : undefined,
       publishedTime: article.publishedAt,
       authors: [article.author],
     },
@@ -76,7 +79,7 @@ async function ArticlePageContent({ slug, locale }: { slug: string; locale: "vi"
     { label: article.title[locale] },
   ];
 
-  const articleSchema = {
+  let articleSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title[locale],
@@ -95,6 +98,15 @@ async function ArticlePageContent({ slug, locale }: { slug: string; locale: "vi"
     mainEntityOfPage: `${siteConfig.domain}/${locale}/insights/${slug}`,
     inLanguage: locale,
   };
+
+  if (article.seo?.schemaJson) {
+    try {
+      const customSchema = JSON.parse(article.seo.schemaJson);
+      if (customSchema && typeof customSchema === "object") articleSchema = customSchema;
+    } catch {
+      // Keep the safe default schema when the custom JSON-LD is invalid.
+    }
+  }
 
   return (
     <>
@@ -180,7 +192,7 @@ async function ArticlePageContent({ slug, locale }: { slug: string; locale: "vi"
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }}
       />
     </>
   );

@@ -10,6 +10,7 @@ import { CTASection } from "@/components/sections";
 import { offices } from "@/content/offices";
 import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface OfficesPageProps {
   params: Promise<{ locale: string }>;
@@ -19,7 +20,7 @@ export async function generateMetadata({
   params,
 }: OfficesPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/offices", locale as "vi" | "en", {
     title:
       locale === "vi"
         ? "Văn phòng"
@@ -32,7 +33,7 @@ export async function generateMetadata({
       canonical: `/${locale}/offices`,
       languages: { vi: "/vi/offices", en: "/en/offices" },
     },
-  };
+  });
 }
 
 export default async function OfficesPage({ params }: OfficesPageProps) {

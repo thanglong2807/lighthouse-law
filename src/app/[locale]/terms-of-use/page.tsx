@@ -5,6 +5,7 @@ import { Container } from "@/components/layout";
 import { Section } from "@/components/layout/section";
 import { PageHero } from "@/components/common/page-hero";
 import { Breadcrumb } from "@/components/common/breadcrumb";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface TermsPageProps {
   params: Promise<{ locale: string }>;
@@ -14,7 +15,7 @@ export async function generateMetadata({
   params,
 }: TermsPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/terms-of-use", locale as "vi" | "en", {
     title:
       locale === "vi"
         ? "Điều khoản sử dụng"
@@ -27,7 +28,7 @@ export async function generateMetadata({
       canonical: `/${locale}/terms-of-use`,
       languages: { vi: "/vi/terms-of-use", en: "/en/terms-of-use" },
     },
-  };
+  });
 }
 
 export default async function TermsOfUsePage({ params }: TermsPageProps) {

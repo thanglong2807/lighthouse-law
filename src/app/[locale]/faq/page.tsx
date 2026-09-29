@@ -7,6 +7,7 @@ import { PageHero } from "@/components/common/page-hero";
 import { Accordion } from "@/components/common/accordion";
 import { CTASection } from "@/components/sections";
 import { faqs, faqCategories, type FAQCategory } from "@/content/faqs";
+import { applyPageSeo } from "@/lib/page-seo-store";
 
 interface FAQPageProps {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({
   params,
 }: FAQPageProps): Promise<Metadata> {
   const { locale } = await params;
-  return {
+  return applyPageSeo("/faq", locale as "vi" | "en", {
     title:
       locale === "vi"
         ? "Câu hỏi thường gặp"
@@ -25,7 +26,11 @@ export async function generateMetadata({
       locale === "vi"
         ? "Tìm câu trả lời cho những thắc mắc phổ biến về dịch vụ pháp lý của Lighthouse Law."
         : "Find answers to common questions about Lighthouse Law's legal services.",
-  };
+    alternates: {
+      canonical: `/${locale}/faq`,
+      languages: { vi: "/vi/faq", en: "/en/faq" },
+    },
+  });
 }
 
 export default async function FAQPage({ params }: FAQPageProps) {
