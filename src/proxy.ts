@@ -7,7 +7,7 @@ const COOKIE_NAME = "lhl_admin_session";
 const SESSION_SECRET = process.env.ADMIN_SESSION_SECRET ?? "";
 
 export const config = {
-  matcher: ["/", "/(vi|en)/:path*"],
+  matcher: ["/:path*"],
 };
 
 async function verifyAdminSessionEdge(token?: string | null) {
@@ -39,12 +39,18 @@ async function verifyAdminSessionEdge(token?: string | null) {
 }
 
 export default async function proxy(req: NextRequest) {
+  const { pathname } = req.nextUrl;
+  const sensitivePath = /^\/(?:\.env(?:\.[^/]+)?|\.git(?:\/|$)|data(?:\/|$))/i.test(pathname);
+  if (sensitivePath) return new NextResponse(null, { status: 404 });
+
   if (process.env.NODE_ENV === "production" && req.headers.get("x-forwarded-proto") !== "https") {
     const url = req.nextUrl.clone();
     url.protocol = "https:";
     return NextResponse.redirect(url, 308);
   }
-  const { pathname } = req.nextUrl;
+  const isLocalizedPath = pathname === "/" || /^\/(vi|en)(?:\/|$)/.test(pathname);
+  if (!isLocalizedPath) return NextResponse.next();
+
   const isAdminLogin = /^\/(vi|en)\/admin\/login\/?$/.test(pathname);
   const protectedRoute =
     (/^\/(vi|en)\/admin(\/|$)/.test(pathname) && !isAdminLogin) ||
